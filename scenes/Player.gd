@@ -21,19 +21,23 @@ func _ready():
 
 
 func update_animation(anim):
+	if velocity.x < 0:
+		$Sprite.flip_h = true 
+	if velocity.x > 0:
+		$Sprite.flip_h = false
 	match(anim):
 		state.FALL:
-			$animationplayer.play("fall")
+			$AnimationPlayer.play("fall")
 		state.ATTACK:
-			$animationplayer.play("ATTACK")
-		state.idle:
-			$animationplayer.play("idle")
+			$AnimationPlayer.play("attact")
+		state.IDLE:
+			$AnimationPlayer.play("idle")
 		state.JUMP:
-			$animationplayer.play("JUMP")
+			$AnimationPlayer.play("jump")
 		state.PUSHING:
-			$animationplayer.play("PUSHING")
+			$AnimationPlayer.play("pushing")
 		state.RUNNING:
-			$animationplayer.play("RUNNING")
+			$AnimationPlayer.play("running")
 		
 	pass
 
