@@ -9,7 +9,7 @@ func _ready():
 	center = get_viewport_rect().size/2
 
 func _process(delta):
-	if Input. is_action_just_pressed("zoom"):
+	if Input.is_action_just_pressed("zoom"):
 		if zoomed:
 			target = null
 			zoomed = false
@@ -18,9 +18,9 @@ func _process(delta):
 			zoomed = true
 
 	if zoomed:
-		zoom = zoom.move_toward(Vector2(0.3,0.3), 0.03)
-		position = position.move_toward(target.global_position,1000)
+		zoom = zoom.move_toward(Vector2(0.3,0.3), .03)
+		position = position.move_toward(target.global_position,20)
 		
 	else:
 		zoom = zoom.move_toward(Vector2(1,1), 0.03)
-		position = position.move_toward(center,1000)
+		position = position.move_toward(center,20)
