@@ -227,4 +227,5 @@ script = ExtResource( 3 )
 position = Vector2( 288, 147 )
 
 [node name="Area2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 139, 0 )
+position = Vector2( 127, 11 )
+rotation = -3.14159
