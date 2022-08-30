@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Basics 2D Godot"
-run/main_scene="res://scenes/Player.tscn"
+run/main_scene="res://scenes/World.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameStats="*res://scripts/Game_Stats.gd"
 
 [display]
 
