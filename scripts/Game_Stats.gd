@@ -10,12 +10,13 @@ func reset():
 	
 func check_reset():
 	if current_spawn == null:
-		reset()
+		print("Call Reset Func")
+		#reset()
 	else: 
 		return false
 
 func set_spawn(spawn):
-	current_spawn == spawn
+	current_spawn = spawn
 	
 func get_spawn():
 	return current_spawn
