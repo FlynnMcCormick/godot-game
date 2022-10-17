@@ -5,4 +5,5 @@ func _ready():
 	$AnimationPlayer.play ("spin")
 	
 func _process(delta):
-	$Path2D/PathFollow2D.offset += follow_speed * delta
+	$Path2D/PathFollow2D.offset += 50 * delta
+	print(delta)

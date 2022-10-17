@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=29 format=2]
+=======
+[gd_scene load_steps=31 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/tileset.png" type="Texture" id=2]
@@ -9,6 +13,11 @@
 [ext_resource path="res://SavePoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/World.gd" type="Script" id=9]
 [ext_resource path="res://other assets/joystix monospace.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="Curve2D" id=26]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 27, -1, 0, 0, 0, 0, 93, -1, 0, 0, 0, 0, 94, 31, 0, 0, 0, 0, -2, 31, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -2, -1, 0, 0, 0, 0, 29, -1 )
+}
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -216,10 +225,15 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 font_data = ExtResource( 10 )
 
 [node name="World" type="Node2D"]
+position = Vector2( 1, 0 )
 script = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+<<<<<<< Updated upstream
 position = Vector2( 84, 219 )
+=======
+position = Vector2( 343, 157 )
+>>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -252,6 +266,25 @@ __meta__ = {
 [node name="CollisionShape2D" parent="DoorAndButton/Sprite2/Door" index="0"]
 position = Vector2( 1, 0 )
 
+<<<<<<< Updated upstream
+=======
+[node name="SpinningBlade" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1106, 1 )
+
+[node name="Path2D" parent="SpinningBlade" index="1"]
+curve = SubResource( 26 )
+
+[node name="PathFollow2D" parent="SpinningBlade/Path2D" index="0"]
+position = Vector2( -1, -1 )
+rotation = 1.5197e-08
+
+[node name="CollisionShape2D" parent="SpinningBlade/Sprite/Area2D" index="0"]
+__meta__ = {
+"_edit_group_": true
+}
+
+>>>>>>> Stashed changes
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -299,16 +332,24 @@ visible = false
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_left = 1.0
 anchor_right = 1.0
+<<<<<<< Updated upstream
 margin_left = -1280.0
 margin_bottom = 720.0
+=======
+anchor_bottom = 1.0
+margin_bottom = 1.0
+>>>>>>> Stashed changes
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
-margin_left = 1098.0
-margin_top = 18.0
-margin_right = 1254.0
-margin_bottom = 38.0
+anchor_left = 0.5
+anchor_right = 1.796
+anchor_bottom = 1.0
+margin_left = -639.0
+margin_top = 6.0
+margin_right = -1044.88
+margin_bottom = -2.0
 custom_fonts/font = SubResource( 25 )
-text = "00 : 00 : 00"
+text = "00 : 00 : 00 "
 align = 2
 
 [node name="Area2D12" parent="." instance=ExtResource( 5 )]

@@ -4,8 +4,7 @@ extends Area2D
 func _ready():
 	$AnimationPlayer.play("Spike Trigger")
 
-func _on_Area2D_body_entered(body):
-	if "Player" in str(body):
-		print("playerdead")
+func _on_DeathZone_area_entered(area):
+	if area.is_in_group("Deadly"):
 		if GameStats.check_reset() == false:
-			body.global_position = GameStats.get_spawn().global_position
+			global_position = GameStats.get_spawned().global_position

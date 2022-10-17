@@ -141,7 +141,7 @@ tracks/0/keys = {
 radius = 4.0
 height = 4.0
 
-[node name="Player" type="KinematicBody2D" groups=["Player"]]
+[node name="Player" type="KinematicBody2D" groups=["Deadly", "Player"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -164,7 +164,7 @@ anims/pushing = SubResource( 5 )
 anims/roll = SubResource( 9 )
 anims/running = SubResource( 6 )
 
-[node name="DeathZone" type="Area2D" parent="." groups=["Deadly"]]
+[node name="DeathZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2( -1, 1 )
