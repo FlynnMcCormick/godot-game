@@ -80,13 +80,14 @@ anims/spin = SubResource( 25 )
 curve = SubResource( 26 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-rotation = -0.0210495
+position = Vector2( 96, 30 )
+rotation = -3.13096
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 8
 
-[node name="Area2D" type="Area2D" parent="Sprite"]
+[node name="Area2D" type="Area2D" parent="Sprite" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
 shape = SubResource( 27 )

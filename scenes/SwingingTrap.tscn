@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sprites/trap_suspended_anim_strip_18.png" type="Texture" id=1]
+[ext_resource path="res://scenes/AnimationPlayer.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -42,10 +43,11 @@ position = Vector2( 0.243615, -0.969872 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PoolVector2Array( 0, 15, -7, 15, -9, 17, -12, 19, -10, 22, -10, 25, -12, 27, -10, 29, -10, 32, -12, 35, -9, 38, -9, 41, -12, 44, -7, 46, -7, 48, 7, 48, 8, 47, 12, 43, 9, 41, 9, 38, 12, 35, 9, 33, 9, 30, 12, 27, 9, 25, 9, 21, 11, 20, 8, 17, 7, 15 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["Deadly"]]
 autoplay = "Swing"
 playback_speed = 0.5
 anims/RESET = SubResource( 2 )
 anims/Swing = SubResource( 1 )
+script = ExtResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

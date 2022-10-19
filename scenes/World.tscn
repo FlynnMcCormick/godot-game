@@ -220,7 +220,7 @@ font_data = ExtResource( 10 )
 script = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 193, -3 )
+position = Vector2( 332, 150 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -256,6 +256,10 @@ position = Vector2( 1, 0 )
 [node name="SpinningBlade" parent="." instance=ExtResource( 7 )]
 visible = false
 position = Vector2( 1106, 1 )
+
+[node name="PathFollow2D" parent="SpinningBlade/Path2D" index="0"]
+position = Vector2( 94, 30 )
+rotation = -3.13096
 
 [node name="CollisionShape2D" parent="SpinningBlade/Sprite/Area2D" index="0"]
 __meta__ = {
@@ -294,6 +298,7 @@ position = Vector2( 328, 182 )
 position = Vector2( 248, 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
