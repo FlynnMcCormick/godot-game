@@ -79,16 +79,15 @@ func _physics_process(delta):
 	
 
 
-<<<<<<< Updated upstream
+
 func _on_DeathZone_area_entered(area):
 	if area.is_in_group("Deadly"):
 		if GameStats.check_reset() == false:
-<<<<<<< Updated upstream
+
 			global_position = GameStats.get_spawned().global_position 
-=======
+
 func _on_Death_Zone_area_entered(area):
 	pass # Replace with function body.
->>>>>>> Stashed changes
-=======
-			global_position = GameStats.get_spawn().global_position 
->>>>>>> Stashed changes
+
+	global_position = GameStats.get_spawn().global_position 
+
