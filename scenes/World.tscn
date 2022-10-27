@@ -217,6 +217,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 font_data = ExtResource( 10 )
 
 [node name="World" type="Node2D"]
+position = Vector2( 0, -2 )
 script = ExtResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -311,6 +312,42 @@ margin_bottom = 38.0
 custom_fonts/font = SubResource( 25 )
 text = "00 : 00 : 00"
 align = 2
+
+[node name="Area2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 200, 248 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 216, 248 )
+
+[node name="Area2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 232, 248 )
+
+[node name="Area2D9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 248, 248 )
+
+[node name="Area2D10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 264, 248 )
+
+[node name="Area2D11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 280, 248 )
+
+[node name="Area2D12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 297, 248 )
+
+[node name="Area2D13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 313, 248 )
+
+[node name="Area2D14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 329, 248 )
+
+[node name="Area2D15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 345, 248 )
+
+[node name="Area2D16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 361, 248 )
+
+[node name="Area2D17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 377, 248 )
 
 [editable path="DoorAndButton"]
 [editable path="SpinningBlade"]
